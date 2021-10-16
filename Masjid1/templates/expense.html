@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block content %}
+        <h1 style="text-align: center;" class="mt-4">
+      Add Expense
+    </h1>
+    <br>
+    <form class="form">
+    <div class="container col-lg- col-sm-6 col-6">
+          <div class="row">
+                <b class="mt-1">
+                    Month
+                </b>
+                <select name="month" class="form-control col-lg-4 ml-3 mr-sm-5">
+                    {% for month in months %}
+                    <option>{{month}}</option>
+                    {% endfor %}
+                </select>
+                <b class="mt-1">
+                    Year
+                </b>
+                <select name="year" class="form-control col-lg-4 ml-3">
+                    {% for year in years %}
+                    <option>{{year}}</option>
+                    {% endfor %}
+                </select>
+          </div>
+          <div class="row">
+              <p>
+                <select name="data" class="form-control mt-5">
+                    {% for d in data %}
+                    <option>{{d}}</option>
+                    {% endfor %}
+                </select>
+              </p>
+              <input type="number" class="form-control col-lg-4 mt-5 ml-5" value="0"><br>
+          </div>
+        <button class="btn btn-outline-success">
+                  ADD
+              </button>
+    </div>
+{% endblock %}

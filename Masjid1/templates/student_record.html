@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+        <h1 style="text-align: center;" class="mt-4">
+      Student Record
+    </h1>
+    <br>
+    <form class="form">
+    <div class="container col-lg-6 col-sm-6 col-6">
+        <label>
+          <b>
+            Roll Number
+          </b>
+        </label>
+        <input type="text" class="form-control" disabled placeholder="Ex: 1234566"><br>
+
+        <label>
+          <b>
+            Name
+          </b>
+        </label>
+        <input type="text" class="form-control" placeholder="Ex: Omer" required><br>
+
+        <input type="submit" class="btn btn-outline-success col-4" value="See Progress">
+        <input type="button" class="btn btn-outline-danger col-4" value="Edit"><br>
+        <input type="button" class="btn btn-outline-info col-4 mt-2" value="Promote Aluminia">
+        </form>
+    </div>
+
+{% endblock %}

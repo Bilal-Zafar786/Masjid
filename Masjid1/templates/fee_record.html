@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <h1 style="text-align: center;" class="mt-4">
+      Fee Submission
+    </h1>
+    <br>
+    <form class="form">
+    <div class="container col-lg-6">
+        <label>
+          <b>
+            Roll Number
+          </b>
+        </label>
+        <input type="text" class="form-control" disabled placeholder="Ex: 1234566"><br>
+
+        <label>
+          <b>
+            Name
+          </b>
+        </label>
+        <input type="text" class="form-control" placeholder="Ex: Omer" required><br>
+        <div class="table ml-3">
+          <div class="row">
+              <p>
+                <select name="month" class="form-control">
+                    {% for month in months %}
+                    <option>{{month}}</option>
+                    {% endfor %}
+                </select>
+              </p>
+            <p>
+                <select name="year" class="form-control">
+                    {% for year in years %}
+                    <option>{{year}}</option>
+                    {% endfor %}
+                </select>
+              </p>
+<!--            <input type="number" class="form-control col-lg-2" placeholder="Month">-->
+<!--            <input type="number" class="form-control col-lg-2 mr-sm-2" placeholder="Year">-->
+          </div>
+            </div>
+        <label>
+            <b>Fee</b>
+        </label>
+        <input type="number" placeholder="Fee" class="form-control mb-2">
+        <label>
+            <b>Discounted</b>
+        </label>
+        <input type="checkbox" placeholder="Fee" class="mt-1"><br>
+        <input type="submit" class="btn btn-outline-success mr-sm-1" value="Save">
+        <input type="reset" class="btn btn-outline-danger" value="Reset">
+        </form>
+    </div>
+
+{% endblock %}

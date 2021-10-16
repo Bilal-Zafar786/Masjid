@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <h1 style="text-align: center;" class="mt-4">
+      Student Progress
+    </h1>
+    <br>
+    <form class="form">
+    <div class="container col-lg-6">
+        <label>
+          <b>
+            Roll Number
+          </b>
+        </label>
+        <input type="text" class="form-control" disabled placeholder="Ex: 1234566"><br>
+
+        <label>
+          <b>
+            Name
+          </b>
+        </label>
+        <input type="text" class="form-control" placeholder="Ex: Omer" required><br>
+
+        <label>
+          <b>
+            Progress Record
+          </b>
+        </label><br>
+        <div class="table ml-3">
+          <div class="row ml-4">
+              <b class="mr-sm-3 mt-1">From</b>
+              <p>
+                <select name="surah no." class="form-control">
+                    {% for surah in surahs %}
+                    <option>{{surah}}</option>
+                    {% endfor %}
+                </select>
+              </p>
+            <p class="mr-sm-4">
+                <select name="ayat no." class="form-control">
+                    {% for ayat in ayats %}
+                    <option>{{ayat}}</option>
+                    {% endfor %}
+                </select>
+              </p>
+
+<!--            <input type="number" class="form-control col-lg-2" placeholder="Ayat No.">-->
+<!--            <input type="text" class="form-control col-lg-2 mr-sm-2" placeholder="Surah Name.">-->
+<!--            <input type="number" class="form-control col-lg-2" placeholder="Ayat No.">-->
+<!--            <input type="text" class="form-control col-lg-2" placeholder="Surah Name.">-->
+          </div>
+          <div class="row ml-4">
+              <b class="mr-sm-3 mt-1">To</b>
+              <p class="ml-4">
+                <select name="surah no." class="form-control">
+                    {% for surah in surahs %}
+                    <option>{{surah}}</option>
+                    {% endfor %}
+                </select>
+              </p>
+            <p class="mr-sm-4">
+                <select name="ayat no." class="form-control">
+                    {% for ayat in ayats %}
+                    <option>{{ayat}}</option>
+                    {% endfor %}
+                </select>
+              </p>
+
+<!--            <input type="number" class="form-control col-lg-2" placeholder="Ayat No.">-->
+<!--            <input type="text" class="form-control col-lg-2 mr-sm-2" placeholder="Surah Name.">-->
+<!--            <input type="number" class="form-control col-lg-2" placeholder="Ayat No.">-->
+<!--            <input type="text" class="form-control col-lg-2" placeholder="Surah Name.">-->
+          </div>
+        </div>
+        <input type="submit" class="btn btn-outline-success mr-sm-1" value="Save">
+        <input type="reset" class="btn btn-outline-danger" value="Reset">
+        </form>
+    </div>
+
+{% endblock %}
