@@ -1,0 +1,1 @@
+web: gunicorn Gulraiz_Project.wsgi
