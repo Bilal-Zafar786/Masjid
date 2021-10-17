@@ -1,1 +1,1 @@
-web: gunicorn Gulraiz_Project.wsgi
+web: gunicorn Gulraiz_Project.wsgi --log-file -
